@@ -32,7 +32,7 @@ export function How() {
         </div>
         <hr className="hair" style={{ marginTop: 56 }} />
         <p className="label" style={{ marginTop: 20, maxWidth: "70ch" }}>
-          {LIVE ? "Live on Robinhood Chain mainnet. Beta and unaudited. The simulator above runs only in your browser, with made-up prices." : "The rule contract is not deployed yet. The simulator above runs only in your browser, with made-up prices."}
+          {LIVE ? "Live on Robinhood Chain mainnet. The simulator above runs only in your browser, with made-up prices." : "The rule contract is not deployed yet. The simulator above runs only in your browser, with made-up prices."}
         </p>
       </div>
     </section>

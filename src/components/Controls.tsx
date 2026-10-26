@@ -43,7 +43,7 @@ export function Controls() {
             ))}
           </ul>
           <p className="label" style={{ marginTop: 8 }}>
-            {LIVE ? "Live on mainnet. Beta. Unaudited." : "Contract not deployed yet."}
+            {LIVE ? "Live on mainnet." : "Contract not deployed yet."}
           </p>
         </div>
         <Reveal>

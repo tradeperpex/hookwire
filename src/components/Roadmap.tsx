@@ -16,7 +16,7 @@ const GROUPS = [
     name: "Next",
     live: false,
     items: [
-      ["Independent audit", "Before anyone should trust it with size. Until then it is beta."],
+      ["Independent audit", "Before anyone should trust it with size."],
       ["TWAP triggers", "Rules that read a time weighted price, so one block of price pushing cannot fire them."],
       ["Buy rules and ladders", "Buy a dip, and sell in steps."],
     ],
@@ -41,7 +41,7 @@ export function Roadmap() {
             What works today, and what does not.
           </h2>
           <p className="lead" style={{ marginTop: 24 }}>
-            {LIVE ? "The first group exists on mainnet as beta. The rest is a plan, and plans change." : "The first group is built, and the rule contract is waiting for its mainnet deploy. The rest is a plan, and plans change."}
+            {LIVE ? "The first group exists on mainnet. The rest is a plan, and plans change." : "The first group is built, and the rule contract is waiting for its mainnet deploy. The rest is a plan, and plans change."}
           </p>
         </Reveal>
         <div style={{ marginTop: 64 }}>

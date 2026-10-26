@@ -493,7 +493,7 @@ export function AppBuilder() {
           </dl>
 
           <p className="hint" style={{ margin: 0 }}>
-            The trigger reads the pool spot price. Spot can be pushed inside a block, so keep amounts you can afford to lose and use a slippage you accept. Hookwire is beta and unaudited.
+            The trigger reads the pool spot price. Spot can be pushed inside a block, so keep amounts you can afford to lose and use a slippage you accept.
           </p>
 
           <div className="hair" />

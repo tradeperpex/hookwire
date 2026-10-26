@@ -26,7 +26,7 @@ export default function DocsPage() {
               <a className="link-quiet" style={{ minHeight: 0 }} href={explorer.address(RULES_ADDRESS)} target="_blank" rel="noopener noreferrer">
                 <code>{RULES_ADDRESS}</code>
               </a>
-              . It is beta software and has not been audited.
+              .
             </>
           ) : (
             <>The rule contract is built and tested on a fork of mainnet, and is not deployed yet. This page describes what it does once it is.</>
@@ -102,7 +102,7 @@ export default function DocsPage() {
             <strong>Sequencer.</strong> Robinhood Chain is an Arbitrum Nitro L2 with a central sequencer. If it is down, nothing runs.
           </li>
           <li>
-            <strong>Bugs.</strong> The contract is tested against real pools on a fork. It is not audited.
+            <strong>Bugs.</strong> The contract is tested against real pools on a fork. It has not had an independent audit.
           </li>
         </ul>
         <p>This page describes software. It does not tell you what to buy or sell.</p>

@@ -11,7 +11,7 @@ export const SITE = {
   rpc: "https://rpc.mainnet.chain.robinhood.com",
   tagline: "Rules that act while you sleep.",
   description:
-    "Write a rule on a token as a sentence. Hookwire executes it on Robinhood Chain through Uniswap v4, inside a limit you set, while you sleep. Beta, unaudited.",
+    "Write a rule on a token as a sentence. Hookwire executes it on Robinhood Chain through Uniswap v4, inside a limit you set, while you sleep.",
 } as const;
 
 /** True once HookwireRules is deployed and NEXT_PUBLIC_RULES_ADDRESS is set. */

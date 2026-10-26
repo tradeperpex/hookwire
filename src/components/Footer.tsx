@@ -60,7 +60,7 @@ export function Footer() {
 
         <hr className="hair" style={{ marginTop: 32 }} />
         <p style={{ color: "var(--muted)", fontSize: "0.8125rem", marginTop: 24, maxWidth: "78ch" }}>
-          Hookwire is experimental beta software and has not been audited. Rules read pool spot prices, and swaps can fill worse than you expect or fail. Use only money you can afford to lose. The home page simulator uses made-up prices and does not trade. Digital assets are
+          Rules read pool spot prices, and swaps can fill worse than you expect or fail. Use only money you can afford to lose. The home page simulator uses made-up prices and does not trade. Digital assets are
           volatile and you can lose everything you put in. Hookwire is not affiliated with Robinhood or Uniswap Labs.
         </p>
         <p style={{ color: "var(--muted)", fontSize: "0.8125rem", marginTop: 12 }}>2026 Hookwire.</p>
