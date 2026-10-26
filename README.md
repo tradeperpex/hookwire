@@ -35,7 +35,7 @@ npm run lint
 | --- | --- | --- |
 | `ROBINHOOD_RPC_URL` | RPC for pool lookups and the `/api/rpc` read proxy. Server only, never sent to the browser | `.env.local` and Vercel project settings |
 | `NEXT_PUBLIC_RULES_ADDRESS` | Deployed `HookwireRules` address. Empty means the app says the contract is not deployed | `.env.local` and Vercel |
-| `NEXT_PUBLIC_SITE_URL` | Canonical URL, Open Graph, sitemap | default `https://hookwire.io` |
+| `NEXT_PUBLIC_SITE_URL` | Canonical URL, Open Graph, sitemap | default `https://hookwire.fun` |
 
 Copy `.env.example` to `.env.local`. `.env*` is git-ignored. If a key was ever pasted into a chat or a ticket, rotate it.
 

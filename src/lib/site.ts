@@ -3,7 +3,7 @@ import { RULES_ADDRESS } from "./chain";
 // Single place for public facts. Change these when the domain and handle are bought.
 export const SITE = {
   name: "Hookwire",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://hookwire.io",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://hookwire.fun",
   x: "https://x.com/hookwire_x",
   xHandle: "@hookwire_x",
   explorer: "https://robinhoodchain.blockscout.com",
