@@ -101,6 +101,7 @@ console.log("SUMMARY BEFORE SUBMIT\n" + (await main()).split("YOUR RULE")[1]?.sl
 
 const count = async () => BigInt((await (await fetch(RPC, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "eth_call", params: [{ to: env.NEXT_PUBLIC_RULES_ADDRESS, data: "0xf6bcf633" }, "latest"] }) })).json()).result);
 const before = await count();
+await waitFor(() => ev("[...document.querySelectorAll('button.btn-primary')].some(b => /Approve|Create/.test(b.textContent) && !b.disabled)"), "submit button enabled");
 await ev("[...document.querySelectorAll('button.btn-primary')].find(b => /Approve|Create/.test(b.textContent)).click()");
 await waitFor(async () => (await count()) > before, "rule on chain", 120_000);
 console.log("ruleCount", String(await count()));
