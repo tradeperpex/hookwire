@@ -4,8 +4,8 @@ import { RULES_ADDRESS } from "./chain";
 export const SITE = {
   name: "Hookwire",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://hookwire.io",
-  x: "https://x.com/hookwire",
-  xHandle: "@hookwire",
+  x: "https://x.com/hookwire_x",
+  xHandle: "@hookwire_x",
   explorer: "https://robinhoodchain.blockscout.com",
   chainId: 4663,
   rpc: "https://rpc.mainnet.chain.robinhood.com",

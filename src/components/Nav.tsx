@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Mark, Wordmark } from "./Mark";
 import { SITE } from "@/lib/site";
+import { XIcon } from "./XLink";
 
 const LINKS = [
   { href: "/#how", label: "How it works" },
@@ -119,7 +120,8 @@ export function Nav() {
           </nav>
 
           <div style={{ gridColumn: 3, justifySelf: "end", display: "flex", alignItems: "center", gap: 8 }}>
-            <a href={SITE.x} target="_blank" rel="noopener noreferrer" className="nav-link nav-x">
+            <a href={SITE.x} target="_blank" rel="noopener noreferrer" className="nav-link nav-x" aria-label={`Follow ${SITE.xHandle} on X`} style={{ alignItems: "center", gap: 8 }}>
+              <XIcon size={14} />
               Follow on X
             </a>
             <Link href="/app" className="btn btn-primary nav-cta" style={{ minHeight: 42, padding: "0 20px" }}>
@@ -172,6 +174,19 @@ export function Nav() {
           >
             Open app
           </Link>
+        </span>
+        <span className="menu-row" style={{ ["--i" as string]: LINKS.length + 1, marginTop: 12 }}>
+          <a
+            href={SITE.x}
+            target="_blank"
+            rel="noopener noreferrer"
+            tabIndex={open ? 0 : -1}
+            className="btn btn-ghost"
+            style={{ width: "100%", minHeight: 52, gap: 10 }}
+          >
+            <XIcon />
+            Follow {SITE.xHandle}
+          </a>
         </span>
       </div>
     </>

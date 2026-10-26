@@ -4,6 +4,7 @@ import { Simulator } from "@/components/Simulator";
 import { How } from "@/components/How";
 import { Roadmap } from "@/components/Roadmap";
 import { Token } from "@/components/Token";
+import { Follow } from "@/components/Follow";
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       <Controls />
       <Roadmap />
       <Token />
+      <Follow />
     </>
   );
 }

@@ -2,16 +2,19 @@
 
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { preload } from "react-dom";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { ChainStatus } from "./ChainStatus";
 import { CtaButton } from "./CtaButton";
+import { FollowX } from "./XLink";
 
 const STREAM = "https://stream.mux.com/T6oQJQ02cQ6N01TR6iHwZkKFkbepS34dkkIc9iukgy400g.m3u8";
-const POSTER =
-  "https://images.unsplash.com/photo-1647356191320-d7a1f80ca777?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3";
+// First frame of the stream, served from this site, so the poster is the same picture as the video.
+const POSTER = "/hero-poster-v2.jpg";
 
 export function HeroSection() {
+  preload(POSTER, { as: "image", fetchPriority: "high" });
   const ref = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -49,6 +52,11 @@ export function HeroSection() {
       id="top"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-black px-6 text-white"
     >
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 opacity-60"
+        style={{ backgroundImage: `url(${POSTER})`, backgroundSize: "cover", backgroundPosition: "center" }}
+      />
       <video
         ref={ref}
         className="hero-video absolute inset-0 h-full w-full object-cover opacity-60"
@@ -127,6 +135,10 @@ export function HeroSection() {
         >
           Non-custodial. Beta. Not audited.
         </motion.p>
+
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 1 }}>
+          <FollowX />
+        </motion.div>
       </div>
     </section>
   );

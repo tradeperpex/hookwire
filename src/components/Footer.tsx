@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SITE, LIVE, RULES_ADDRESS } from "@/lib/site";
 import { explorer } from "@/lib/chain";
+import { XIcon } from "./XLink";
 import { Mark, Wordmark } from "./Mark";
 
 export function Footer() {
@@ -28,8 +29,9 @@ export function Footer() {
             <Link className="nav-link" href="/docs">
               Docs
             </Link>
-            <a className="nav-link" href={SITE.x} target="_blank" rel="noopener noreferrer">
-              X
+            <a className="nav-link" href={SITE.x} target="_blank" rel="noopener noreferrer" aria-label={`${SITE.xHandle} on X`} style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+              <XIcon size={14} />
+              {SITE.xHandle}
             </a>
             <a className="nav-link" href={SITE.explorer} target="_blank" rel="noopener noreferrer">
               Explorer
